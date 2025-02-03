@@ -1,4 +1,20 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// jQuery code for calculator
+$(document).ready(function () {
+    $("#calculate").click(function () {
+        var hours = $("#hours").val();
+        var rate = $("#rate").val();
 
-// Write your JavaScript code.
+        // Validate input
+        if (hours <= 0 || isNaN(hours)) {
+            $("#error-message").show();
+            $("#total").val("");
+            return;
+        } else {
+            $("#error-message").hide();
+        }
+
+        // Calculate total
+        var totalCost = parseFloat(hours) * parseFloat(rate);
+        $("#total").val(totalCost.toFixed(2));
+    });
+});

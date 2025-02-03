@@ -4,5 +4,23 @@
     ViewData["Title"] = "Calculator App";
 }
 <h1>@ViewData["Title"]</h1>
+<br />
+<div class="calculator-container">
+    <h2>Tutoring Cost Calculator</h2>
+    <label for="hours">Enter the number of hours:</label>
+    <input type="number" id="hours" min="1" required>
+    <span id="error-message">Please enter a valid number of hours.</span>
 
-<p>Use this page to calculate your commission.</p>
+    <label for="rate">Hourly Rate ($):</label>
+    <input type="text" id="rate" value="50" readonly>
+
+    <button id="calculate" class="btn">Calculate Total</button>
+
+    <label for="total">Total Cost ($):</label>
+    <input type="text" id="total" readonly>
+
+</div>
+
+
+<script src="wwwroot/js/site.js"></script>
+

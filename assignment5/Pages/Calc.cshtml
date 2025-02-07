@@ -1,4 +1,5 @@
-﻿@page
+﻿@* Payton Hatch Group 4-6 *@
+@page
 @model CalcModel
 @{
     ViewData["Title"] = "Calculator App";
@@ -7,25 +8,30 @@
 <br />
 <div class="calculator-container">
     <h2>Tutoring Cost Calculator</h2>
+
+    @* number of hours *@
     <label for="hours">Enter the number of hours:</label>
     <input type="number" id="hours" min="1" required>
     <br />
     <span id="error-message">Please enter a valid number of hours.</span>
     <br />
 
+    @* fixed hourly rate *@
     <label for="rate">Hourly Rate ($):</label>
     <input type="text" id="rate" value="50" readonly>
     <br />
-
+    
+    @* calulate button *@
     <button id="calculate" class="btn">Calculate Total</button>
     <br />
     <br />
 
+    @* output box *@
     <label for="total">Total Cost ($):</label>
     <input type="text" id="total" readonly>
 
 </div>
 
-
+@* link to js *@
 <script src="wwwroot/js/site.js"></script>
 

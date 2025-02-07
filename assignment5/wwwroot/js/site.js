@@ -1,5 +1,7 @@
 ﻿// jQuery code for calculator
 $(document).ready(function () {
+
+    // click listener
     $("#calculate").click(function () {
         var hours = $("#hours").val();
         var rate = $("#rate").val();
